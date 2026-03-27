@@ -151,6 +151,13 @@ export const engineeringProjects = {
   note: 'Feel free to scroll or click on an image to learn more.',
   overviewCards: [
     {
+      title: 'Bicycle Flywheel',
+      meta: 'Capstone Project / Ongoing',
+      image: wixImage('36a6a2_da08d857d59543bdaad8b67455b14a99~mv2.png', 720, 720),
+      alt: 'Bicycle flywheel preview',
+      anchor: 'bicycle-flywheel',
+    },
+    {
       title: 'Turtle Basking Area',
       meta: 'Personal Project / May 2025 - September 2025',
       image: wixImage('36a6a2_9b1cd657f0dd4042b08aa07c3411e98a~mv2.png', 720, 720),
@@ -209,30 +216,95 @@ export const engineeringProjects = {
   ],
   sections: [
     {
+      anchor: 'bicycle-flywheel',
+      kicker: 'Capstone Project',
+      title: 'Bicycle Flywheel',
+      meta: 'Ongoing',
+      summary: [
+        'Our group capstone project is currently ongoing. We are planning on creating a kinetic energy recovery system for a bicycle by integrating a flywheel into the rear wheel of the bicycle.',
+        "Over the summer, we've researched the project and other types of kinetic energy recovery systems. We've looked into other versions that people have attempted, and we plan to use those as inspiration to make ours the most effective modular design.",
+      ],
+      skills: [
+        'Collaborating',
+        'CAD Modeling',
+        'Material Selection',
+        'Research and Technical Documentation',
+      ],
+      gallery: [
+        {
+          title: 'Concept',
+          caption: 'Early concept work from the ongoing capstone.',
+          image: wixImage('36a6a2_da08d857d59543bdaad8b67455b14a99~mv2.png', 900, 900),
+          alt: 'Bicycle flywheel concept image',
+        },
+        {
+          title: 'Current CAD',
+          caption: 'Current design study for the bicycle flywheel system.',
+          image: wixImage('36a6a2_03920d126b2740ef861641e0ecb4b3e5~mv2.png', 900, 900),
+          alt: 'Bicycle flywheel CAD image',
+        },
+      ],
+    },
+    {
       anchor: 'turtle-basking-area',
       kicker: 'Personal Project',
       title: 'Turtle Basking Area',
       meta: 'May 2025 - September 2025',
       summary: [
-        'This project section on the original site is presented as an iteration log that moves from criteria and early solutions into later versions of the basking platform.',
+        'I recently adopted two baby turtles, Willis and Leon, named after Willis Hall on Leon Street where I lived for two years. Setting up their habitat required significant investment in filters, UV lamps, and other essential supplies. When it came to the basking platform, another crucial requirement for turtle health, I decided to build one myself rather than purchase yet another expensive component.',
+        "I designed a 3D printed basking platform with detachable hooks for cleaning ease. I felt safe using PLA since it has food-grade purposes, and people generally think it's safe in aquariums. I included little slots so that the turtles could easily climb up. The turtles liked basking on the platform, but over time the combination of heat and the turtles' weight pushed the platform down.",
+        "In two days there was already deformation. The basking area still worked, so I kept it for a while, but then Willis made his first escape. I couldn't simply lower the platform because the water line needs to stay high for the filter to work and for the platform to remain completely dry.",
+        "To fix the deformation issue, I moved to PETG for the next iteration and then built a larger system around a polypropylene box from Target. I cut a hole large enough for a turtle to get in, printed a new ladder-style platform, tied it into the box, and added acrylic panels that both prevent escape and reduce evaporation.",
+      ],
+      skills: [
+        'CAD Modeling',
+        '3D Printing and Fabrication',
+        'Material Selection',
+        'Shop Tools',
+      ],
+      bullets: [
+        'Non-toxic material',
+        'Can hold the weight of 2 turtles',
+        'Temperature of the basking area is 90-95°F',
+        'Turtles should be able to get up to the area',
+        'Turtles need to be able to completely dry',
+        'No sharp edges',
+        'Aquarium-safe',
+        'Sturdy',
+        'Heat resistance',
+        'Climbable',
+        'Above water level',
+        'Safe',
+        'PLA is food-safe and aquarium safe',
+        'PLA is sturdy, so the platform was printed thick',
+        'PLA glass transition temperature is 131-140°F',
+        "Add little holes for the turtles to grip into but not get their nails stuck",
+        "Put it high enough that the filter still works but the platform isn't submerged",
+        'Fillet and file anything that seems sharp',
       ],
       gallery: [
         {
-          title: 'Description / Criteria',
-          caption: 'Initial problem framing and the design goals for the basking platform.',
+          title: 'Willis and Leon',
+          caption: 'Willis on the left and Leon on the right.',
+          image: wixImage('36a6a2_ef9e335fd6fd422d8365d97dea438ab0~mv2.png', 900, 900),
+          alt: 'Willis and Leon turtles',
+        },
+        {
+          title: 'Initial Platform',
+          caption: 'First PLA basking platform prototype.',
           image: wixImage('36a6a2_9b1cd657f0dd4042b08aa07c3411e98a~mv2.png', 900, 900),
           alt: 'Turtle basking area prototype',
         },
         {
           title: 'Version 2',
-          caption: 'Second-pass iteration following testing and refinement.',
-          image: wixImage('36a6a2_39acd45ab572443daa83294c977360e8~mv2.png', 900, 900),
+          caption: 'Material and geometry update after the first platform deformed.',
+          image: wixImage('36a6a2_7c01bc93647546a3b370de82d5bfabed~mv2.png', 900, 900),
           alt: 'Turtle basking area version 2',
         },
         {
-          title: 'Turtle Escape! / Version 3',
-          caption: 'A later revision addressing the escape path shown on the original page.',
-          image: wixImage('36a6a2_98ef578b867b464a82a5cf8d0e36c523~mv2.png', 900, 900),
+          title: 'Version 3',
+          caption: 'Polypropylene box and ladder system that prevented further escapes.',
+          image: wixImage('36a6a2_54615853c03646998f4e5894f7573f07~mv2.jpg', 900, 900),
           alt: 'Turtle basking area version 3',
         },
       ],
@@ -243,25 +315,29 @@ export const engineeringProjects = {
       title: 'Bedside Phone Holder',
       meta: 'July 2025',
       summary: [
-        'The original portfolio presents this as a compact before-and-after fabrication project focused on improving bedside organization.',
+        "I moved into a new apartment over the summer, and I no longer had a place to put my phone overnight. I needed it nearby my head since it was my morning alarm, but I don't like having it on my bed. To solve this issue, I fabricated a press-fit bedside phone holder designed to sit on top of my bed post.",
+        'This is how I originally had my phone charging overnight. My solution fit my phone perfectly and stopped it from falling when the alarm rang.',
+        "I originally made the charger holder too small because I didn't know the diameter of my cord, but I filed it out so it could fit and then redesigned the CAD accordingly. Having the charger port built in was essential because I no longer had to reach to the ground for the charger every night.",
+        "For the next iteration, I could add holders for glasses and jewelry, since I often take those off while in bed and sometimes lose my rings. A water bottle holder would also be useful to avoid reaching to the floor. Ultimately there are endless possibilities for improvements, and I'm appreciative that I can bring these ideas to life through hands-on fabrication.",
       ],
+      skills: ['CAD Modeling', '3D Printing'],
       gallery: [
         {
           title: 'Before',
           caption: 'Original bedside setup.',
-          image: wixImage('36a6a2_34afbb61a418418ab219f78144117b97~mv2.png', 900, 900),
+          image: wixImage('36a6a2_f009782ed81440219c671244c8eec7a9~mv2.png', 900, 900),
           alt: 'Bedside phone holder before state',
         },
         {
           title: 'After',
           caption: 'Installed holder solution.',
-          image: wixImage('36a6a2_103bebc5ddd541d8b8e1afba38cf22e5~mv2.png', 900, 900),
+          image: wixImage('36a6a2_34afbb61a418418ab219f78144117b97~mv2.png', 900, 900),
           alt: 'Bedside phone holder after state',
         },
         {
-          title: 'Installed Detail',
-          caption: 'Close visual of the finished piece.',
-          image: wixImage('36a6a2_60af5e407a3e4dd9b2bf96d1654ea4d0~mv2.png', 900, 900),
+          title: 'Charger Port Revision',
+          caption: 'Iteration after resizing the charger opening.',
+          image: wixImage('36a6a2_87403f28453c4ef191c104a2c5fa52aa~mv2.png', 900, 900),
           alt: 'Bedside phone holder detail',
         },
       ],
@@ -272,8 +348,12 @@ export const engineeringProjects = {
       title: 'Blue Spirit Costume',
       meta: 'October 2024',
       summary: [
-        'This build is broken down into the major fabricated costume components highlighted on the original page: the mask and swords.',
+        'I wanted to create a last-minute Halloween costume that was unique and affordable. I have always loved Avatar the Last Airbender, so I decided to make the Blue Spirit, a more niche character who mostly wears black but carries a mask and dual swords.',
+        "I didn't design the mask myself. I found it on Thingiverse, printed the parts scaled to my face height, glued them together with superglue, painted it, and glued scrap cloth on the back so it could be tied on.",
+        'I used pictures from the show to model the sword in SolidWorks. I had the blade laser cut and the handle 3D printed, then connected them with superglue.',
+        "Overall, I enjoyed using multiple different media to get to the final product. I received a lot of compliments because of how well made it was, and it was much cheaper than buying one online because I already had most of the materials.",
       ],
+      skills: ['CAD Modeling', '3D Printing and Fabrication', 'Sewing'],
       gallery: [
         {
           title: 'Completed Costume',
@@ -301,8 +381,12 @@ export const engineeringProjects = {
       title: 'Pool Triangle',
       meta: 'October 2023',
       summary: [
-        'A small personal fabrication project featured on the original site as a finished object showcase.',
+        "I wanted to hone my woodworking skills, because I'd mostly used wood for prototyping rather than actual application. I wanted to make something with purpose, so I asked friends if they needed anything. One friend said his dorm pool triangle had gone missing, and he'd been using his arms to rack the balls.",
+        "That made a pool triangle a good way to practice simple woodworking techniques while making something practical. Northeastern's makerspace woodshop wasn't functional at the time, so I visited a friend at Boston College who worked at their makerspace.",
+        'I used SolidWorks to model the dimensions I wanted. I used a miter saw, belt sander, and orbital sander to achieve a smooth and accurate pool triangle.',
+        "Although it was simple, it was fun to make something practical. Because of my enjoyment for woodworking, it's one of my goals to have a woodshop when I have my own house so I can build furniture for myself, friends, and family.",
       ],
+      skills: ['Woodworking', 'CAD Modeling'],
       gallery: [
         {
           title: 'Finished Piece',
@@ -330,8 +414,13 @@ export const engineeringProjects = {
       title: 'Microfluidic Channels',
       meta: 'December 2022 - May 2023',
       summary: [
-        'The site groups this work into several channel and fixture studies, including a microscope slide holder, a Coplin jar concept, and Y-channels.',
+        'I joined a microfluidic research lab during the second semester of my first year. There, I learned about microfluidics and diffusiophoresis, made several tools for the lab, and delivered weekly presentations to my PI to explain my findings.',
+        'I designed a microscope slide holder for the lab. I wanted to minimize the space it took up, so it holds the slide vertically, and I included chamfers to make placing the slides easier.',
+        'I also designed a Coplin jar, which is used to submerge and either stain or wash slides. A typical Coplin jar can only hold five, but my jar was designed to hold ten and uses a screw-on cap to reduce spills.',
+        'There were three different versions of the Y-channel I made. The changes were small dimensional adjustments to better fit the tubing available. To make the actual channel, I had the mold SLA printed, poured in PDMS, cured it, bonded the PDMS to a microscope slide with plasma treatment, and then punched in the tubing holes.',
+        'This took quite a bit of iteration because there were issues with PDMS curing, PDMS adhering to the slide, and dust getting into the channels. Eventually I produced laminar flow with dyed salt water and used the Zeiss microscope to photograph the result.',
       ],
+      skills: ['CAD Modeling', 'Soft Lithography', 'Presenting', 'Microscopy'],
       gallery: [
         {
           title: 'Microscope Slide Holder',
@@ -359,8 +448,12 @@ export const engineeringProjects = {
       title: 'Upset Birds',
       meta: 'January 2023 - April 2023',
       summary: [
-        'This course project is presented around an early proof-of-concept and later implementation visuals.',
+        "For our Cornerstone 2 project, we designed and constructed a carnival game inspired by Angry Birds. The tabletop game integrated wooden structural elements, 3D-printed components, and Arduino microcontrollers for automated scoring and game mechanics.",
+        'I wanted to design a game where one person shoots at targets while another person moves the target, using belts to transfer motion. To make it more interesting, we implemented a slingshot instead of simple ball throwing, and I crocheted a pouch for the ball.',
+        'I designed and built the target movement mechanism using 3D-printed pulleys with duct tape belts. The system featured motor-driven pulleys for bidirectional target control, custom target mounts with integrated button sensors for hit detection, and a front-facing display showing real-time scores.',
+        'The main challenge was achieving proper belt tension for reliable operation. During the actual carnival, the project was a success, and it was relieving to see everything working properly by then.',
       ],
+      skills: ['CAD Modeling', 'Collaboration', 'Prototyping'],
       gallery: [
         {
           title: 'Proof of Concept',
@@ -389,8 +482,11 @@ export const engineeringProjects = {
       meta: 'October 2022 - April 2023',
       summary: [
         "I designed an ablative nozzle in my freshman year of college for the AeroNU propulsion group. I used Rao's approximation based on our engine specs to model the nozzle. The nozzle was made from a silica tubing sleeve and phenolic resin to create a silica phenolic ablative composite. The nozzle was successfully made after many mold iterations, but we were unable to hot fire it due to time constraints.",
+        'The mold was printed out of PLA, and then I would put the silica tubing around the mold and mix and pour the viscous resin into the mold. The resin took 24 hours to set.',
+        "After the resin was set, it was brittle and hard. It wouldn't easily pry out of the mold, and it broke while I was attempting to break off the PLA.",
         "Even though we didn't have time on our hot fire day to fire my nozzle, I'm still proud of the work put into it to make a successful nozzle. Going through this process was also helpful because the next year I went on to mentor new AeroNU members on ablative nozzles.",
       ],
+      skills: ['CAD Modeling', '3D Printing', 'Injection Molding'],
       bullets: [
         'For the second iteration, I thought that if the plastic was thinner, it would remove more easily, so I added holes into the design. I also made the outer cavity two parts for easy separation. However the inner part of the mold was not centered, so the nozzle geometry would come out incorrectly.',
         'To fix the centering issue, I designed a new bottom plate to hold the other cavities in place.',
@@ -401,7 +497,7 @@ export const engineeringProjects = {
       gallery: [
         {
           title: 'Nozzle Design',
-          caption: 'Initial design study for the ablative nozzle.',
+          caption: "CAD based on Rao's approximation.",
           image: wixImage('36a6a2_5f733d6090eb493eb1db64e80985a1dd~mv2.png', 900, 900),
           alt: 'Ablative nozzle design image',
         },

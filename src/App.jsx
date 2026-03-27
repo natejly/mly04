@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   BrowserRouter,
   Link,
@@ -28,13 +28,29 @@ const pageTitles = {
   '/contact': 'Contact | Melana Ly',
 }
 
-function ScrollToTop() {
-  const { pathname } = useLocation()
+function ScrollManager() {
+  const { pathname, hash } = useLocation()
+  const previousPathnameRef = useRef(pathname)
 
   useEffect(() => {
-    window.scrollTo(0, 0)
     document.title = pageTitles[pathname] ?? 'Melana Ly'
   }, [pathname])
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.slice(1))
+
+      if (element) {
+        requestAnimationFrame(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        })
+      }
+    } else if (previousPathnameRef.current !== pathname) {
+      window.scrollTo(0, 0)
+    }
+
+    previousPathnameRef.current = pathname
+  }, [hash, pathname])
 
   return null
 }
@@ -56,7 +72,7 @@ function Shell() {
 
   return (
     <>
-      <ScrollToTop />
+      <ScrollManager />
       <div className="site-shell">
         <header className="site-header">
           <div className="container site-header__inner">

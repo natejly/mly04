@@ -320,6 +320,10 @@
   background: var(--panel);
 }
 
+.project-panel {
+  scroll-margin-top: 108px;
+}
+
 .project-panel__intro {
   display: grid;
   grid-template-columns: minmax(220px, 0.6fr) minmax(0, 1fr);
