@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --bg: #fbf9f4;
+  --panel: #fefdfb;
+  --ink: #14223a;
+  --muted: #5e6778;
+  --border: #d8dde9;
+  --accent: #8ea7ef;
+  --accent-soft: #edf2ff;
+  --font-body: 'Lato', sans-serif;
+  --font-heading: 'Fraunces', serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(168, 188, 246, 0.24), transparent 32%),
+    linear-gradient(180deg, #fbf9f4 0%, #f6f3ec 100%);
+  color: var(--muted);
+  font-family: var(--font-body);
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+#root {
+  min-height: 100vh;
+}
